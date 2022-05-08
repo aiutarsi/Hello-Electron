@@ -8,3 +8,5 @@ https://www.electronjs.org/docs/latest/tutorial/quick-start
 - macOS : dmg
 - windows : exe
 - Ubuntu(Debian) : deb
+
+![alt](fig1.png)
