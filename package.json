@@ -1,0 +1,56 @@
+{
+  "name": "hello-electron",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "build-macos": "electron-builder --mac --x64",
+    "build-windows": "electron-builder --win --x64",
+    "build-linux": "electron-builder --linux --x64"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aiutarsi/Hello-Electron.git"
+  },
+  "keywords": [],
+  "author": "aiutarsi <endofthe20thcenturyhk@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aiutarsi/Hello-Electron/issues"
+  },
+  "homepage": "https://github.com/aiutarsi/Hello-Electron#readme",
+  "devDependencies": {
+    "electron": "^18.2.0",
+    "electron-builder": "^23.0.3"
+  },
+  "build": {
+    "appId": "Hello-Electron.app",
+    "directories": {
+      "output": "dist-mac"
+    },
+    "files": [
+      "assets",
+      "src",
+      "package.json",
+      "package-lock.json"
+    ],
+    "mac": {
+      "icon": "assets/icon.icns",
+      "target": "dmg"
+    },
+    "win": {
+      "icon": "assets/icon.png",
+      "target": "nsis"
+    },
+    "linux": {
+      "icon": "assets/icon.icns",
+      "target": "deb"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  }
+}
